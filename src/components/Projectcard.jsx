@@ -1,4 +1,4 @@
-import './ProjectCard.css';
+import './Projectcard.css';
 
 export default function ProjectCard({ title, category, description, tech = [], liveUrl, color = '#dbeafe', icon = '🌐' }) {
   return (

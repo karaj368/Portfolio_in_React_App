@@ -1,4 +1,4 @@
-import './SkillCard.css';
+import './Skillcard.css';
 
 export function SkillCard({ icon, name, level, percent }) {
   return (
