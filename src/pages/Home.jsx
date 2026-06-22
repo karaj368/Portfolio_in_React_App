@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import SectionTitle from '../components/SectionTitle';
-import ProjectCard from '../components/ProjectCard';
+import SectionTitle from '../components/Sectiontitle';
+import ProjectCard from '../components/Projectcard';
 import './Home.css';
 
 const featuredProjects = [

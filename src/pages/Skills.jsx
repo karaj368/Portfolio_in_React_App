@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import SectionTitle from '../components/SectionTitle';
-import { SkillCard, ServiceCard } from '../components/SkillCard';
+import SectionTitle from '../components/Sectiontitle';
+import { SkillCard, ServiceCard } from '../components/Skillcard';
 import './Skills.css';
 
 const frontendSkills = [
