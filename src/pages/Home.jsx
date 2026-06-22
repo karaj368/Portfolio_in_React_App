@@ -34,8 +34,8 @@ const featuredProjects = [
 ];
 
 const skills = [
-  'HTML5', 'CSS3 / SCSS', 'JavaScript', 'Bootstrap',
-  'Tailwind CSS', 'React JS', 'WordPress', 'Elementor',
+  'React JS', 'HTML5', 'CSS3 / SCSS', 'JavaScript', 'Bootstrap',
+  'Tailwind CSS', 'WordPress', 'Elementor',
   'Figma', 'Adobe XD', 'GitHub / GitLab', 'SEO Optimization',
   'Responsive Design', 'MongoDB', 'REST API', 'WooCommerce',
 ];
