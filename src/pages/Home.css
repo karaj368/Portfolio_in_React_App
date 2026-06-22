@@ -36,7 +36,7 @@
 
 .hero__name {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 6vw, 5.5rem);
+  font-size: clamp(3.0rem, 6vw, 5.5rem);
   font-weight: 800;
   color: #ffffff;
   line-height: 1.05;

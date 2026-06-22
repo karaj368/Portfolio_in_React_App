@@ -440,4 +440,12 @@ p { color: #4a4a5a; line-height: 1.8; }
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
   h1 { font-size: 2rem; }
+  .stat-block .stat-number{
+  font-size: 1.5rem;
+  color:var(--chalk)
+  }
+  .stat-block .stat-label {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
 }
