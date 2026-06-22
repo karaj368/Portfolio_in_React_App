@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import SectionTitle from '../components/SectionTitle';
+import SectionTitle from '../components/Sectiontitle';
 import './Resume.css';
 
 const experience = [
