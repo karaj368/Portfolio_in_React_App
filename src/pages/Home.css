@@ -1,0 +1,165 @@
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #0D0D0D 0%, #1A1A2E 55%, #1652F0 100%);
+  padding: 90px 0 60px;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero__available {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #93c5fd;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.hero__available-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 8px #4ade80;
+  display: inline-block;
+}
+
+.hero__name {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 6vw, 5.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+.hero__name-blue { color: #60a5fa; }
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  color: #93c5fd;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.hero__bio {
+  color: #d1d5db;
+  font-size: 0.97rem;
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 32px;
+}
+
+.hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+
+.hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.hero__stats .stat-number { color: #ffffff; font-size: 2.2rem; }
+.hero__stats .stat-label { color: #9ca3af; }
+.hero__stats-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.15);
+}
+
+/* Hero Visual */
+.hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__avatar {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1652F0, #1A1A2E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 800;
+  color: #ffffff;
+  box-shadow: 0 32px 64px rgba(22,82,240,0.35);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero__badge {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 10px 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.hero__badge--top { top: -12px; right: -12px; }
+.hero__badge--bottom { bottom: -16px; left: -16px; flex-direction: column; align-items: flex-start; gap: 2px; }
+.hero__badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
+.hero__badge-label { font-size: 0.68rem; color: #9ca3af; font-weight: 500; }
+.hero__badge-value { font-size: 0.82rem; font-weight: 700; color: var(--ink); }
+
+/* Skills Cloud */
+.skills-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Services Row */
+.service-mini { padding: 24px; }
+.service-mini__title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; margin: 10px 0 8px; color: var(--ink); }
+.service-mini__desc { font-size: 0.858rem; color: #6b7280; line-height: 1.75; }
+
+/* Why Hire */
+.why-hire { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.why-hire__left {}
+.why-hire__right {}
+.why-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-md);
+  padding: 22px;
+}
+.why-item__icon { font-size: 1.5rem; color: #60a5fa; margin-bottom: 10px; display: block; }
+.why-item__title { font-family: var(--font-display); font-size: 1rem; color: #ffffff; margin-bottom: 6px; }
+.why-item__desc { font-size: 0.84rem; color: #9ca3af; line-height: 1.7; }
+
+/* Testimonials */
+.testimonial-card { padding: 26px; }
+.testimonial-quote { font-size: 0.88rem; color: #4b5563; line-height: 1.8; font-style: italic; margin-bottom: 20px; flex: 1; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 0.8rem; flex-shrink: 0; }
+.testimonial-name { font-weight: 700; font-size: 0.88rem; color: var(--ink); }
+.testimonial-role { font-size: 0.76rem; color: #9ca3af; }
+
+/* CTA Sub */
+.cta-sub { color: rgba(255,255,255,0.7); font-size: 1.05rem; max-width: 480px; margin: 0 auto 32px; }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .hero__grid { grid-template-columns: 1fr; text-align: center; }
+  .hero__visual { display: none; }
+  .hero__bio { max-width: 100%; }
+  .hero__ctas { justify-content: center; }
+  .hero__stats { justify-content: center; }
+  .hero__available { justify-content: center; }
+  .why-hire { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 768px) {
+  .services-row { grid-template-columns: 1fr; }
+}

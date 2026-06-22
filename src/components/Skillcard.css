@@ -1,0 +1,12 @@
+.skill-card { padding: 18px 20px; }
+.skill-card__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.skill-card__left { display: flex; align-items: center; gap: 10px; }
+.skill-card__icon { font-size: 1.15rem; }
+.skill-card__name { font-weight: 600; font-size: 0.9rem; color: var(--ink); }
+.skill-card__level { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--cobalt); }
+
+.service-card { transition: all 0.3s ease; }
+.service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: rgba(22,82,240,0.25); }
+.service-card__inner { padding: 28px; }
+.service-card__title { font-family: var(--font-display); font-size: 1.15rem; margin: 0 0 10px; color: var(--ink); }
+.service-card__desc { font-size: 0.875rem; color: #6b7280; line-height: 1.75; }

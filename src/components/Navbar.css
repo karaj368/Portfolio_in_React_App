@@ -1,0 +1,122 @@
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(245, 245, 240, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1.5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar--scrolled {
+  border-bottom-color: var(--mist);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.navbar__logo {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+.navbar__logo-dot { color: var(--cobalt); }
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar__link {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--cobalt);
+  transition: width 0.28s ease;
+}
+.navbar__link:hover { color: var(--cobalt); }
+.navbar__link:hover::after { width: 100%; }
+.navbar__link--active { color: var(--cobalt); }
+.navbar__link--active::after { width: 100%; }
+
+.navbar__cta { padding: 10px 22px; font-size: 0.84rem; }
+
+/* ===== HAMBURGER ===== */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+}
+.hamburger-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger-bar.open:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger-bar.open:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger-bar.open:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ===== MOBILE MENU ===== */
+.navbar__mobile {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--chalk);
+  border-top: 1.5px solid var(--mist);
+  padding: 16px 24px 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.navbar__mobile--open {
+  display: flex;
+  max-height: 400px;
+}
+.navbar__mobile-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--mist);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navbar__mobile-link:hover,
+.navbar__mobile-link.navbar__link--active { color: var(--cobalt); }
+.navbar__mobile .btn { margin-top: 12px; text-align: center; justify-content: center; }
+
+@media (max-width: 860px) {
+  .navbar__links { display: none; }
+  .navbar__hamburger { display: flex; }
+}
