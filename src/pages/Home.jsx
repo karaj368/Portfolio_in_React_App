@@ -8,7 +8,7 @@ const featuredProjects = [
     title: 'Shobhit University',
     category: 'Education',
     description: 'Full university portal with admissions, ODL, and course listing pages. High-traffic, SEO-optimized WordPress build for a premier B.Tech institution in Delhi NCR.',
-    tech: ['WordPress', 'Elementor', 'SEO', 'JavaScript'],
+    tech: ['React-JS','HTML5','CSS3 / SCSS','JavaScript','WordPress', 'Elementor', 'SEO'],
     liveUrl: 'https://www.shobhituniversity.ac.in',
     color: 'linear-gradient(135deg, #dbeafe, #bfdbfe)',
     icon: '🏛️',
@@ -17,7 +17,7 @@ const featuredProjects = [
     title: 'Shemesh Diamonds',
     category: 'E-Commerce · Jewelry',
     description: 'Premium diamond jewelry e-commerce platform with elegant product catalog, variable pricing, and a conversion-optimized checkout experience.',
-    tech: ['WordPress', 'WooCommerce', 'CSS3', 'SCSS'],
+    tech: ['WordPress', 'WooCommerce', 'HTML5','CSS3 / SCSS','JavaScript', 'SEO', 'Responsive'],
     liveUrl: 'https://shemesh-diamonds.com',
     color: 'linear-gradient(135deg, #d1fae5, #a7f3d0)',
     icon: '💎',
@@ -34,10 +34,10 @@ const featuredProjects = [
 ];
 
 const skills = [
-  'React JS', 'HTML5', 'CSS3 / SCSS', 'JavaScript', 'Bootstrap',
-  'Tailwind CSS', 'WordPress', 'Elementor',
-  'Figma', 'Adobe XD', 'GitHub / GitLab', 'SEO Optimization',
-  'Responsive Design', 'MongoDB', 'REST API', 'WooCommerce',
+  'React JS', 'HTML5', 'CSS3 / SCSS', 'MongoDB', 'REST API', 'JavaScript', 'Bootstrap',
+  'Tailwind CSS', 'WordPress', 'Elementor', 'WooCommerce',
+  'Figma', 'Adobe XD', 'GitHub / GitLab', 'Vercel', 'SEO Optimization',
+  'Responsive Design', 'Performance Optimization', 'Cross-Browser Compatibility',
 ];
 
 const whyHireItems = [
@@ -115,7 +115,7 @@ export default function Home() {
               </div>
               <div className="hero__badge hero__badge--bottom">
                 <span className="hero__badge-label">Stack</span>
-                <span className="hero__badge-value">HTML · CSS · WP · JS</span>
+                <span className="hero__badge-value">React-JS · HTML · CSS · WordPress</span>
               </div>
             </div>
           </div>
