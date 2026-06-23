@@ -110,7 +110,7 @@ export default function Home() {
             </div>
             <div className="hero__visual">
               <div className="hero__avatar">
-                <img src="/src/assets/images/profile-pic.webp" className="w-100" alt="Karaj Singh Profile picture" />
+                <img src="./src/assets/images/profile-pic.webp" className="w-100" alt="Karaj Singh Profile picture" />
               </div>
               <div className="hero__badge hero__badge--top">
                 <span className="hero__badge-dot" />
