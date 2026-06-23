@@ -1,10 +1,14 @@
 import './Projectcard.css';
 
-export default function ProjectCard({ title, category, description, tech = [], liveUrl, color = '#dbeafe', icon = '🌐' }) {
+export default function ProjectCard({ title, projectImg, category, description, tech = [], liveUrl, color = '#dbeafe' }) {
   return (
     <div className="project-card card">
       <div className="project-card__thumb" style={{ background: color }}>
-        <span className="project-card__icon">{icon}</span>
+        <img
+          src={projectImg}
+          alt={title}
+          className="project-card__image"
+        />
       </div>
       <div className="project-card__body">
         <span className="badge">{category}</span>

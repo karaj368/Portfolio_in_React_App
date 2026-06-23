@@ -3,6 +3,7 @@ import SectionTitle from '../components/Sectiontitle';
 import ProjectCard from '../components/Projectcard';
 import './Home.css';
 
+
 const featuredProjects = [
   {
     title: 'Shobhit University',
@@ -11,7 +12,7 @@ const featuredProjects = [
     tech: ['React-JS','HTML5','CSS3 / SCSS','JavaScript','WordPress', 'Elementor', 'SEO'],
     liveUrl: 'https://www.shobhituniversity.ac.in',
     color: 'linear-gradient(135deg, #dbeafe, #bfdbfe)',
-    icon: '🏛️',
+    projectImg: '/src/assets/images/sum.webp',
   },
   {
     title: 'Shemesh Diamonds',
@@ -20,7 +21,7 @@ const featuredProjects = [
     tech: ['WordPress', 'WooCommerce', 'HTML5','CSS3 / SCSS','JavaScript', 'SEO', 'Responsive'],
     liveUrl: 'https://shemesh-diamonds.com',
     color: 'linear-gradient(135deg, #d1fae5, #a7f3d0)',
-    icon: '💎',
+    projectImg: '/src/assets/images/SUM.webp',
   },
   {
     title: 'Tour My India',
@@ -29,7 +30,7 @@ const featuredProjects = [
     tech: ['WordPress', 'SEO', 'Responsive', 'Bootstrap'],
     liveUrl: 'https://www.tourmyindia.com/golden-triangle',
     color: 'linear-gradient(135deg, #fef3c7, #fde68a)',
-    icon: '✈️',
+    projectImg: '/src/assets/images/SUM.webp',
   },
 ];
 
@@ -108,7 +109,9 @@ export default function Home() {
               </div>
             </div>
             <div className="hero__visual">
-              <div className="hero__avatar">KS</div>
+              <div className="hero__avatar">
+                <img src="/src/assets/images/profile-pic.webp" className="w-100" alt="Karaj Singh Profile picture" />
+              </div>
               <div className="hero__badge hero__badge--top">
                 <span className="hero__badge-dot" />
                 <span>Available to Hire</span>

@@ -8,7 +8,8 @@
   border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 .project-card__icon { font-size: 3rem; }
-
+.project-card__thumb {  display: flex; align-items: center; justify-content: center; overflow: hidden;}
+.project-card__image { width: 100; object-fit: cover;}
 .project-card__body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
 .project-card__title {
   font-family: var(--font-display);
