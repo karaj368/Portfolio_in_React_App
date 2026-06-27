@@ -8,17 +8,34 @@ const contactDetails = [
   { icon: 'fas fa-map-marker-alt', label: 'Location', value: 'New Delhi, India', href: null },
 ];
 
-export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
+// export default function Contact() {
+//   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
+//   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+//   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     setSubmitted(true);
+//     setTimeout(() => setSubmitted(false), 4000);
+//     setForm({ name: '', email: '', subject: '', message: '' });
+//   };
+export default function ContactForm() {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setForm({ name: '', email: '', subject: '', message: '' });
+    setTimeout(() => setResult(false), 3000);
+    const formData = new FormData(event.target);
+    formData.append("access_key", "aa1c59a5-565e-4160-909d-a8ee5b87669b");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    setResult(data);
   };
 
   return (
@@ -82,14 +99,21 @@ export default function Contact() {
             <div className="contact-form-wrap card">
               <h3 className="contact-form-title">Send a Message</h3>
               <p className="contact-form-sub">Fill out the form and I'll get back to you within 24 hours.</p>
+                {result && (
+                  <div className="form-success">
+                  <i className="fas fa-check-circle" />  Message sent! I'll be in touch soon.
+                </div>
+                )
 
-              {submitted && (
+                }
+                
+              {/* {submitted && (
                 <div className="form-success">
                   <i className="fas fa-check-circle" /> Message sent! I'll be in touch soon.
                 </div>
-              )}
+              )} */}
 
-              <form onSubmit={handleSubmit} className="contact-form">
+              {/* <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-row">
                   <div className="form-group">
                     <label className="form-label">Your Name</label>
@@ -107,6 +131,29 @@ export default function Contact() {
                 <div className="form-group">
                   <label className="form-label">Message</label>
                   <textarea name="message" value={form.message} onChange={handleChange} className="form-textarea" placeholder="Tell me about your project — what you need, your timeline, and any other details..." required />
+                </div>
+                <button type="submit" className="btn btn-primary contact-form-submit">
+                  <i className="fas fa-paper-plane" /> Send Message
+                </button>
+              </form> */}
+              <form onSubmit={onSubmit} className="contact-form">
+                <div className="form-row">
+                  <div className="form-group">
+                    <label className="form-label">Your Name</label>
+                    <input type="text" name="name" className="form-input" placeholder="John Smith" required />
+                  </div>
+                  <div className="form-group">
+                    <label className="form-label">Email Address</label>
+                    <input type="email" name="email" className="form-input" placeholder="john@example.com" required />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Subject</label>
+                  <input type="text" name="subject" className="form-input" placeholder="Website Design Project" required />
+                </div>
+                <div className="form-group">
+                  <label className="form-label">Message</label>
+                  <textarea name="message" className="form-textarea" placeholder="Tell me about your project — what you need, your timeline, and any other details..." required />
                 </div>
                 <button type="submit" className="btn btn-primary contact-form-submit">
                   <i className="fas fa-paper-plane" /> Send Message
