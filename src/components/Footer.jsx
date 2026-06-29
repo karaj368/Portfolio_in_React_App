@@ -78,7 +78,7 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copy">© {new Date().getFullYear()} Karaj Singh. All rights reserved.</p>
-          <p className="footer__copy">Built with React JS · Designed with ❤️</p>
+          <p className="footer__copy">Built with React JS · Designed & Develpment by Karaj Singh</p>
         </div>
       </div>
     </footer>
