@@ -146,11 +146,11 @@ export default function Home() {
           <SectionTitle label="What I Do" title="Services I Offer" subtitle="From landing pages to full WordPress websites — I deliver clean code and beautiful design tailored to your goals." />
           <div className="services-row grid-3">
             {[
-              { icon: 'fas fa-code', title: 'Frontend Development', desc: 'Responsive HTML5/CSS3/JS builds with clean semantic code, cross-browser compatibility, and performance optimization.' },
+              { icon: 'fas fa-code', title: 'Frontend Development', desc: 'Web Development using React-JS, Tailwind CSS, Bootstrap-5, HTML5/CSS3/JS, jQuery builds with clean semantic code, cross-browser compatibility, and performance optimization.' },
               { icon: 'fab fa-wordpress', title: 'WordPress Development', desc: 'Custom WordPress themes, Elementor page builds, plugin integration, and full website setup for any business.' },
               { icon: 'fas fa-mobile-alt', title: 'Responsive Design', desc: 'Mobile-first design that looks sharp on every screen — phones, tablets, and desktops — with smooth UX throughout.' },
               { icon: 'fas fa-search', title: 'SEO Optimization', desc: 'On-page SEO best practices built into every project — semantic markup, meta structure, fast load times, and clean URLs.' },
-              { icon: 'fas fa-paint-brush', title: 'Figma / PSD to HTML', desc: 'Pixel-perfect conversion of design files (Figma, PSD, XD) into production-ready HTML/CSS or WordPress pages.' },
+              { icon: 'fas fa-paint-brush', title: 'Figma / PSD to HTML', desc: 'Pixel-perfect conversion of design files (Figma, PSD, XD) into production-ready with React-JS, Tailwind CSS, Bootstrap-5, HTML/CSS or WordPress pages.' },
               { icon: 'fas fa-tachometer-alt', title: 'Speed Optimization', desc: 'Website speed audits, Core Web Vitals improvement, image compression, and lazy loading for better Google rankings.' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="service-mini card-chalk">
